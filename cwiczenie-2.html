@@ -23,7 +23,36 @@
 	
 		function generuj()
 		{
-			
+
+			var x = document.getElementById('x').value;
+			var wynik = document.getElementById('wynik');
+
+			if(isNaN(parseInt(x))){
+				wynik.innerHTML = `Podane x nie jest liczbą!`;
+			}else{
+
+				if(x < 0){
+					wynik.innerHTML = `Podane x jest ujemne!`;
+				}else if(x == 0){
+					wynik.innerHTML = `Podane x jest równe zero!`;
+				}else{
+
+					wynik.innerHTML = `Parzyste: `;
+					for(var i = 1; i <= x; i++){
+						if(i%2 == 0){
+							wynik.innerHTML += i+` `;
+						}
+					}
+
+					wynik.innerHTML += `Nieparzyste: `;
+					for(var i = 1; i <= x; i++){
+						if(i%2 != 0){
+							wynik.innerHTML += i+` `;
+						}
+					}
+				}
+			}
+
 		}
 
 	</script>

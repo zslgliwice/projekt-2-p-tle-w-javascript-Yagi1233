@@ -30,6 +30,27 @@
 	
 		function przemowa()
 		{
+
+			var wynik = document.getElementById('wynik');
+
+			wynik.innerHTML = ``;
+
+			var postac = document.getElementById('postac').value;
+			var ile = document.getElementById('ile').value;
+
+			if(isNaN(parseInt(ile)) || ile <= 0){
+				wynik.innerHTML = `Jeśli nie chcesz mojej zguby, krokodyla daj mi, luby`;
+			}else{
+				if(postac === 'c'){
+					for(var i = 1; i <= ile; i++){
+						wynik.innerHTML += `<p>`+i+`. Mocium panie!</p>`;
+					}
+				}else{
+					for(var i = 1; i <= ile; i++){
+						wynik.innerHTML += `<p>`+i+`. Niech się dzieje wola nieba!</p>`;
+					}
+				}
+			}
 			
 		}
 

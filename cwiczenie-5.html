@@ -23,6 +23,36 @@
 	
 		function generuj()
 		{
+
+			var x = document.getElementById("x").value;
+			var wynik = document.getElementById("wynik");
+
+			wynik.innerHTML = ``;
+
+			var sumy = [];
+			var wynikRownania = 0;
+
+
+			if(isNaN(parseInt(x)) || x < 0 || x%1 != 0){
+				wynik.innerHTML = `Paaanie! Z takim x to my daleko nie zajdziemy`;
+			}else{
+				for(var  i = 0; i < x; i++){
+
+					sumy[i] = i+1;
+					wynikRownania += i+1;
+
+					for(var j = 0; j < sumy.length; j++){
+						if(j == sumy.length-1){
+							wynik.innerHTML += sumy[j];
+						}else{
+							wynik.innerHTML += sumy[j]+` + `;
+						}
+					}
+
+					wynik.innerHTML += ` = `+wynikRownania+`<br>`;
+
+				}
+			}
 			
 		}
 

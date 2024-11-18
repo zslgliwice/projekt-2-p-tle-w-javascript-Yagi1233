@@ -24,10 +24,20 @@
 		function wylosuj()
 		{
 			
+			var tabWylosowanych = [];
+			var wynik = document.getElementById("wynik");
+			wynik.innerHTML = `Liczby: `;
+			var ile = document.getElementById("ile").value;
 			
-			
-			var liczba = Math.floor(Math.random() * 1000) + 1;
-			
+			for(var i = 0; i < ile; i++){
+
+				var liczba = Math.floor(Math.random() * 1000) + 1;
+				tabWylosowanych[i] = liczba;
+
+				wynik.innerHTML += tabWylosowanych[i]+` `;
+
+			}
+
 		}
 
 	</script>
